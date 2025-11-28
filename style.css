@@ -1,0 +1,90 @@
+/* === Base Colors & Theme Variables === */
+:root {
+    --primary: #e63946;
+    --secondary: #f1faee;
+    --accent: #a8dadc;
+    --background: #ffffff;
+    --text: #1d3557;
+  }
+  
+  body.dark {
+    --primary: #f1faee;
+    --secondary: #1d3557;
+    --accent: #457b9d;
+    --background: #1d3557;
+    --text: #f1faee;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Futura', 'Arial', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+  /* === Header === */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background: var(--accent);
+    color: var(--secondary);
+  }
+  
+  header h1 {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  /* === Hero Section === */
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: var(--secondary);
+    text-align: center;
+    transition: background 0.5s;
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+    animation: float 3s ease-in-out infinite alternate;
+  }
+  
+  @keyframes float {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-20px); }
+  }
+  
+  /* === Cards Section === */
+  .cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 4rem 2rem;
+  }
+  
+  .card {
+    width: 200px;
+    height: 200px;
+    background: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary);
+    transition: transform 0.3s, background 0.5s;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+  
+  .card:hover {
+    transform: scale(1.1) rotate(5deg);
+    background: var(--accent);
+  }
+  
