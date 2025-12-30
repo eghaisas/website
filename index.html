@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bauhaus Maximalist</title>
-  <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8" />
+  <title>Scrollama Sticky Overlay</title>
+
+  <!-- Scrollama CDN -->
+  <script src="https://unpkg.com/scrollama"></script>
+
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
-  <header>
-    <h1>Bauhaus Maximalist</h1>
-    <button id="theme-toggle">Switch Theme</button>
-  </header>
 
-  <main>
-    <section class="hero">
-      <h2>Bold Colors. Geometric Shapes. Smooth Motion.</h2>
-    </section>
+  <main class="scrolly">
 
-    <section class="cards">
-      <div class="card">Circle</div>
-      <div class="card">Square</div>
-      <div class="card">Triangle</div>
-    </section>
+    <!-- Sticky graphic -->
+    <div class="graphic">
+      <div id="graphic-content">Step 1</div>
+    </div>
+
+    <!-- Text steps -->
+    <div class="text">
+      <div class="step" data-step="1">This is step 1</div>
+      <div class="step" data-step="2">This is step 2</div>
+      <div class="step" data-step="3">This is step 3</div>
+    </div>
+
   </main>
 
-  <script src="scripts/theme-toggle.js"></script>
+  <script src="scripts/script.js"></script>
 </body>
 </html>
+
